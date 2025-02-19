@@ -1,8 +1,23 @@
-# React + Vite
+# Question Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for generating and managing educational questions with PDF export functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (login/signup)
+- Question generation form
+- Interactive question preview with pagination
+- PDF generation with separate answer key
+- Email functionality
+- Responsive design
+
+## Technologies Used
+
+- React
+- jsPDF
+- CSS3
+- REST API integration
+
+## Setup
+
+1. Clone the repository
