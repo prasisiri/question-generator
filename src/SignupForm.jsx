@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { config } from './config';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const SignupForm = () => {
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:8080/api/auth/signup', {
+      const response = await fetch(`${config.apiUrl}/api/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

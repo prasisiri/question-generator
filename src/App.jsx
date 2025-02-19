@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { config } from './config';
 import './App.css';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable'; // You'll need to install these packages: npm install jspdf jspdf-autotable
@@ -34,8 +35,8 @@ function App() {
 
     try {
       const endpoint = activeTab === 'login' 
-        ? 'http://localhost:8080/api/auth/login'
-        : 'http://localhost:8080/api/auth/signup';
+        ? `${config.apiUrl}/api/auth/login`
+        : `${config.apiUrl}/api/auth/signup`;
 
       const requestBody = activeTab === 'login'
         ? {
@@ -91,7 +92,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8080/api/json/generate', {
+      const response = await fetch(`${config.apiUrl}/api/json/generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
